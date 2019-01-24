@@ -1,0 +1,3 @@
+Thứ 5 24.01.2019
+	15h20
+		Làm được slide menu đơn giản, ấn vào button "Menu" hiện ra các tuỳ chọn.
