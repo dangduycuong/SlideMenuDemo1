@@ -149,10 +149,8 @@
 				FAC200C228E4965400C6EBF4 /* Extensions */,
 				FAC200BB28E493EF00C6EBF4 /* SupportFiles */,
 				CEFD2D6121F85CC800FE5A0A /* AppDelegate.swift */,
-				CEFD2D6321F85CC800FE5A0A /* ViewController.swift */,
-				FAC200BE28E4948B00C6EBF4 /* MedicinalPlantsViewController.swift */,
+				FAC200EC28E596EE00C6EBF4 /* Modules */,
 				FAC200D128E52C2200C6EBF4 /* Models */,
-				FAC200CF28E49E3800C6EBF4 /* DetailMedicinalViewController.swift */,
 				CEFD2D6521F85CC800FE5A0A /* Main.storyboard */,
 				CEFD2D6821F85CC900FE5A0A /* Assets.xcassets */,
 				CEFD2D6A21F85CC900FE5A0A /* LaunchScreen.storyboard */,
@@ -244,6 +242,16 @@
 				FAC200E828E5858000C6EBF4 /* DropDownSelectView.xib */,
 			);
 			path = DropDownSelectView;
+			sourceTree = "<group>";
+		};
+		FAC200EC28E596EE00C6EBF4 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				CEFD2D6321F85CC800FE5A0A /* ViewController.swift */,
+				FAC200BE28E4948B00C6EBF4 /* MedicinalPlantsViewController.swift */,
+				FAC200CF28E49E3800C6EBF4 /* DetailMedicinalViewController.swift */,
+			);
+			path = Modules;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

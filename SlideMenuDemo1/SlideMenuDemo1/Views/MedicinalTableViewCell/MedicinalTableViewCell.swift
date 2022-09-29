@@ -13,6 +13,7 @@ class MedicinalTableViewCell: UITableViewCell {
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var medicinalPlantsImageView: UIImageView!
+    @IBOutlet weak var functionLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -56,7 +57,6 @@ class MedicinalTableViewCell: UITableViewCell {
             components.path = path
             
             if let url = components.url {
-                
                 let processor = DownsamplingImageProcessor(size: medicinalPlantsImageView.bounds.size)
                 |> RoundCornerImageProcessor(cornerRadius: 8)
                 medicinalPlantsImageView.kf.indicatorType = .activity
@@ -79,6 +79,7 @@ class MedicinalTableViewCell: UITableViewCell {
                     }
                 }
             }
+            functionLabel.text = medicinal.function
         }
     }
     
