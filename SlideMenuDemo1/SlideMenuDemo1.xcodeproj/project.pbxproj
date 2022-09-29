@@ -13,6 +13,18 @@
 		CEFD2D6921F85CC900FE5A0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEFD2D6821F85CC900FE5A0A /* Assets.xcassets */; };
 		CEFD2D6C21F85CC900FE5A0A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEFD2D6A21F85CC900FE5A0A /* LaunchScreen.storyboard */; };
 		CEFD2D7721F85CC900FE5A0A /* SlideMenuDemo1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFD2D7621F85CC900FE5A0A /* SlideMenuDemo1Tests.swift */; };
+		FAC200BD28E4941000C6EBF4 /* medicinal_plants.json in Resources */ = {isa = PBXBuildFile; fileRef = FAC200BC28E4941000C6EBF4 /* medicinal_plants.json */; };
+		FAC200BF28E4948B00C6EBF4 /* MedicinalPlantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC200BE28E4948B00C6EBF4 /* MedicinalPlantsViewController.swift */; };
+		FAC200C128E4953000C6EBF4 /* MedicinalPlantsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC200C028E4953000C6EBF4 /* MedicinalPlantsModel.swift */; };
+		FAC200C428E4966900C6EBF4 /* Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC200C328E4966900C6EBF4 /* Identifier.swift */; };
+		FAC200C628E4967A00C6EBF4 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC200C528E4967A00C6EBF4 /* UIView+Extension.swift */; };
+		FAC200C828E4968C00C6EBF4 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC200C728E4968C00C6EBF4 /* UITableView+Extension.swift */; };
+		FAC200CD28E496EA00C6EBF4 /* MedicinalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC200CB28E496EA00C6EBF4 /* MedicinalTableViewCell.swift */; };
+		FAC200CE28E496EA00C6EBF4 /* MedicinalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAC200CC28E496EA00C6EBF4 /* MedicinalTableViewCell.xib */; };
+		FAC200D028E49E3800C6EBF4 /* DetailMedicinalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC200CF28E49E3800C6EBF4 /* DetailMedicinalViewController.swift */; };
+		FAC200D728E53EDA00C6EBF4 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC200D628E53EDA00C6EBF4 /* SearchView.swift */; };
+		FAC200D928E53EE400C6EBF4 /* SearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAC200D828E53EE400C6EBF4 /* SearchView.xib */; };
+		FAC200DB28E541DF00C6EBF4 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC200DA28E541DF00C6EBF4 /* UIViewController+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +48,18 @@
 		CEFD2D7221F85CC900FE5A0A /* SlideMenuDemo1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SlideMenuDemo1Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEFD2D7621F85CC900FE5A0A /* SlideMenuDemo1Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideMenuDemo1Tests.swift; sourceTree = "<group>"; };
 		CEFD2D7821F85CC900FE5A0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAC200BC28E4941000C6EBF4 /* medicinal_plants.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = medicinal_plants.json; sourceTree = "<group>"; };
+		FAC200BE28E4948B00C6EBF4 /* MedicinalPlantsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicinalPlantsViewController.swift; sourceTree = "<group>"; };
+		FAC200C028E4953000C6EBF4 /* MedicinalPlantsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicinalPlantsModel.swift; sourceTree = "<group>"; };
+		FAC200C328E4966900C6EBF4 /* Identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifier.swift; sourceTree = "<group>"; };
+		FAC200C528E4967A00C6EBF4 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		FAC200C728E4968C00C6EBF4 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		FAC200CB28E496EA00C6EBF4 /* MedicinalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicinalTableViewCell.swift; sourceTree = "<group>"; };
+		FAC200CC28E496EA00C6EBF4 /* MedicinalTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MedicinalTableViewCell.xib; sourceTree = "<group>"; };
+		FAC200CF28E49E3800C6EBF4 /* DetailMedicinalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMedicinalViewController.swift; sourceTree = "<group>"; };
+		FAC200D628E53EDA00C6EBF4 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		FAC200D828E53EE400C6EBF4 /* SearchView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchView.xib; sourceTree = "<group>"; };
+		FAC200DA28E541DF00C6EBF4 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,8 +101,14 @@
 		CEFD2D6021F85CC800FE5A0A /* SlideMenuDemo1 */ = {
 			isa = PBXGroup;
 			children = (
+				FAC200C928E496C500C6EBF4 /* Views */,
+				FAC200C228E4965400C6EBF4 /* Extensions */,
+				FAC200BB28E493EF00C6EBF4 /* SupportFiles */,
 				CEFD2D6121F85CC800FE5A0A /* AppDelegate.swift */,
 				CEFD2D6321F85CC800FE5A0A /* ViewController.swift */,
+				FAC200BE28E4948B00C6EBF4 /* MedicinalPlantsViewController.swift */,
+				FAC200D128E52C2200C6EBF4 /* Models */,
+				FAC200CF28E49E3800C6EBF4 /* DetailMedicinalViewController.swift */,
 				CEFD2D6521F85CC800FE5A0A /* Main.storyboard */,
 				CEFD2D6821F85CC900FE5A0A /* Assets.xcassets */,
 				CEFD2D6A21F85CC900FE5A0A /* LaunchScreen.storyboard */,
@@ -94,6 +124,60 @@
 				CEFD2D7821F85CC900FE5A0A /* Info.plist */,
 			);
 			path = SlideMenuDemo1Tests;
+			sourceTree = "<group>";
+		};
+		FAC200BB28E493EF00C6EBF4 /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				FAC200BC28E4941000C6EBF4 /* medicinal_plants.json */,
+			);
+			path = SupportFiles;
+			sourceTree = "<group>";
+		};
+		FAC200C228E4965400C6EBF4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FAC200C328E4966900C6EBF4 /* Identifier.swift */,
+				FAC200C528E4967A00C6EBF4 /* UIView+Extension.swift */,
+				FAC200C728E4968C00C6EBF4 /* UITableView+Extension.swift */,
+				FAC200DA28E541DF00C6EBF4 /* UIViewController+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FAC200C928E496C500C6EBF4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FAC200D528E53EC100C6EBF4 /* SearchView */,
+				FAC200CA28E496CD00C6EBF4 /* MedicinalTableViewCell */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FAC200CA28E496CD00C6EBF4 /* MedicinalTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				FAC200CB28E496EA00C6EBF4 /* MedicinalTableViewCell.swift */,
+				FAC200CC28E496EA00C6EBF4 /* MedicinalTableViewCell.xib */,
+			);
+			path = MedicinalTableViewCell;
+			sourceTree = "<group>";
+		};
+		FAC200D128E52C2200C6EBF4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FAC200C028E4953000C6EBF4 /* MedicinalPlantsModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FAC200D528E53EC100C6EBF4 /* SearchView */ = {
+			isa = PBXGroup;
+			children = (
+				FAC200D628E53EDA00C6EBF4 /* SearchView.swift */,
+				FAC200D828E53EE400C6EBF4 /* SearchView.xib */,
+			);
+			path = SearchView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,8 +261,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAC200BD28E4941000C6EBF4 /* medicinal_plants.json in Resources */,
 				CEFD2D6C21F85CC900FE5A0A /* LaunchScreen.storyboard in Resources */,
+				FAC200D928E53EE400C6EBF4 /* SearchView.xib in Resources */,
 				CEFD2D6921F85CC900FE5A0A /* Assets.xcassets in Resources */,
+				FAC200CE28E496EA00C6EBF4 /* MedicinalTableViewCell.xib in Resources */,
 				CEFD2D6721F85CC800FE5A0A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -197,7 +284,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAC200D728E53EDA00C6EBF4 /* SearchView.swift in Sources */,
+				FAC200DB28E541DF00C6EBF4 /* UIViewController+Extension.swift in Sources */,
+				FAC200CD28E496EA00C6EBF4 /* MedicinalTableViewCell.swift in Sources */,
+				FAC200D028E49E3800C6EBF4 /* DetailMedicinalViewController.swift in Sources */,
+				FAC200C628E4967A00C6EBF4 /* UIView+Extension.swift in Sources */,
+				FAC200BF28E4948B00C6EBF4 /* MedicinalPlantsViewController.swift in Sources */,
+				FAC200C828E4968C00C6EBF4 /* UITableView+Extension.swift in Sources */,
+				FAC200C428E4966900C6EBF4 /* Identifier.swift in Sources */,
 				CEFD2D6421F85CC800FE5A0A /* ViewController.swift in Sources */,
+				FAC200C128E4953000C6EBF4 /* MedicinalPlantsModel.swift in Sources */,
 				CEFD2D6221F85CC800FE5A0A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -361,7 +457,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4LW34R6CMB;
 				INFOPLIST_FILE = SlideMenuDemo1/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -378,7 +476,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4LW34R6CMB;
 				INFOPLIST_FILE = SlideMenuDemo1/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

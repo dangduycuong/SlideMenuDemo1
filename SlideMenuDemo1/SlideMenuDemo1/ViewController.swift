@@ -27,10 +27,16 @@ class ViewController: UIViewController {
             }
         }
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupUI()
         isOn = true
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    private func setupUI() {
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
     
 //    override func viewWillAppear(_ animated: Bool) {
