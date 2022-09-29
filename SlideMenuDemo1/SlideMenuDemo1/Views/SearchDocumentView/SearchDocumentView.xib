@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SearchDocumentView" customModule="SlideMenuDemo1" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FCp-gm-dWa">
+                    <rect key="frame" x="0.0" y="44" width="414" height="40"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="close-small" translatesAutoresizingMaskIntoConstraints="NO" id="189-nJ-Nni">
+                            <rect key="frame" x="374" y="8" width="24" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="24" id="M46-Y5-PDU"/>
+                                <constraint firstAttribute="width" constant="24" id="RFr-86-dar"/>
+                            </constraints>
+                        </imageView>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T0C-rO-fxY">
+                            <rect key="frame" x="16" y="0.0" width="358" height="40"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YNO-0v-fmM">
+                            <rect key="frame" x="374" y="0.0" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="GfJ-Ug-cPw"/>
+                            </constraints>
+                            <connections>
+                                <action selector="tapClearTextButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="WYU-qd-Mhi"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.8901960784313725" green="0.90588235294117647" blue="0.92941176470588238" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="189-nJ-Nni" firstAttribute="centerY" secondItem="FCp-gm-dWa" secondAttribute="centerY" id="C8S-JJ-3Se"/>
+                        <constraint firstItem="YNO-0v-fmM" firstAttribute="top" secondItem="FCp-gm-dWa" secondAttribute="top" id="Ir5-yf-23L"/>
+                        <constraint firstAttribute="width" constant="414" id="RaO-b0-SSs"/>
+                        <constraint firstAttribute="height" constant="40" id="TkE-Ih-DHp"/>
+                        <constraint firstItem="189-nJ-Nni" firstAttribute="leading" secondItem="YNO-0v-fmM" secondAttribute="leading" id="iqj-JQ-yEm"/>
+                        <constraint firstAttribute="bottom" secondItem="YNO-0v-fmM" secondAttribute="bottom" id="j4I-Lm-M6l"/>
+                        <constraint firstAttribute="trailing" secondItem="YNO-0v-fmM" secondAttribute="trailing" id="pGw-x1-fX0"/>
+                        <constraint firstItem="189-nJ-Nni" firstAttribute="leading" secondItem="T0C-rO-fxY" secondAttribute="trailing" id="tsw-OH-JtP"/>
+                        <constraint firstItem="T0C-rO-fxY" firstAttribute="top" secondItem="FCp-gm-dWa" secondAttribute="top" id="vC1-Ph-4cU"/>
+                        <constraint firstItem="T0C-rO-fxY" firstAttribute="leading" secondItem="FCp-gm-dWa" secondAttribute="leading" constant="16" id="w6a-I4-5yD"/>
+                        <constraint firstAttribute="bottom" secondItem="T0C-rO-fxY" secondAttribute="bottom" id="yQ4-De-Ij9"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="FCp-gm-dWa" secondAttribute="bottom" constant="6" id="5pl-F2-waT"/>
+                <constraint firstItem="FCp-gm-dWa" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="QCM-zd-hlP"/>
+                <constraint firstItem="FCp-gm-dWa" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="xyO-PO-o3J"/>
+                <constraint firstAttribute="trailing" secondItem="FCp-gm-dWa" secondAttribute="trailing" id="zNh-2V-Jcz"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="clearImageView" destination="189-nJ-Nni" id="8UY-nN-DuP"/>
+                <outlet property="clearTextButton" destination="YNO-0v-fmM" id="gfa-IP-KTC"/>
+                <outlet property="searchTextField" destination="T0C-rO-fxY" id="1Nt-NH-Lmc"/>
+                <outlet property="searchView" destination="FCp-gm-dWa" id="4c0-OI-ycb"/>
+                <outlet property="widthSearchView" destination="RaO-b0-SSs" id="k3J-hm-7Sg"/>
+            </connections>
+            <point key="canvasLocation" x="132" y="98"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="close-small" width="24" height="24"/>
+    </resources>
+</document>

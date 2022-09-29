@@ -8,6 +8,26 @@
 
 import UIKit
 
+enum SortType {
+    case name
+    case function
+    
+    var text: String {
+        get {
+            switch self {
+            case .name:
+                return "Tìm theo tên"
+            case .function:
+                return "Tìm theo công năng"
+            }
+        }
+    }
+}
+
+protocol MedicinalPlantsViewControllerDelegate: AnyObject {
+    func selectSortType(sortType: SortType)
+}
+
 class MedicinalPlantsViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
@@ -17,13 +37,87 @@ class MedicinalPlantsViewController: UIViewController {
         return view
     }()
     
+    lazy private var dropdownView: UIView = {
+        let view: DropDownSelectView = DropDownSelectView.loadFromNibView()
+        return view
+    }()
+    
+    lazy private var searchDocumentView: UIView = {
+        let view: SearchDocumentView = SearchDocumentView.loadFromNibView()
+        return view
+    }()
+    
     var listMedicinalPlants = [MedicinalPlantsModel]()
+    var filterMedicinalPlants = [MedicinalPlantsModel]()
+    var sortType = SortType.name
+    
+    weak var delegate: MedicinalPlantsViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
         loadJson(filename: "Thuoc")
         tableView.registerCell(MedicinalTableViewCell.self)
+        abob()
+    }
+    
+    private func abob() {
+        if let dropdownView = dropdownView as? DropDownSelectView {
+            dropdownView.showPopup = {
+                self.flowerButtonlicked()
+            }
+        }
+        
+        if let searchDocumentView = searchDocumentView as? SearchDocumentView {
+            delegate.self = searchDocumentView
+            searchDocumentView.textChange = { text in
+                switch self.sortType {
+                case .name:
+                    self.filterMedicinalPlants = self.listMedicinalPlants.filter { (medicinal: MedicinalPlantsModel) in
+                        if let name = medicinal.name?.lowercased().unaccent() {
+                            if name.range(of: text.lowercased().unaccent()) != nil {
+                                return true
+                            }
+                        }
+                        return false
+                    }
+                case .function:
+                    self.filterMedicinalPlants = self.listMedicinalPlants.filter { (medicinal: MedicinalPlantsModel) in
+                        if let function = medicinal.function?.lowercased().unaccent() {
+                            if function.range(of: text.lowercased().unaccent()) != nil {
+                                return true
+                            }
+                        }
+                        return false
+                    }
+                }
+                self.tableView.reloadData()
+            }
+            
+            searchDocumentView.clearAllSearchText = {
+                self.filterMedicinalPlants = self.listMedicinalPlants
+                self.tableView.reloadData()
+            }
+        }
+    }
+    
+    func flowerButtonlicked() {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+        vc.modalPresentationStyle = .popover
+        let popover: UIPopoverPresentationController = vc.popoverPresentationController!
+        popover.barButtonItem = navigationItem.leftBarButtonItem
+        popover.sourceRect = CGRect(origin: self.view.center, size: CGSize.zero)
+        popover.delegate = self
+        vc.sortByName = {
+            self.sortType = .name
+            self.delegate?.selectSortType(sortType: .name)
+        }
+        
+        vc.sortByFunction = {
+            self.sortType = .function
+            self.delegate?.selectSortType(sortType: .function)
+        }
+        present(vc, animated: true, completion:nil)
     }
     
     func loadJson(filename fileName: String) {
@@ -33,6 +127,7 @@ class MedicinalPlantsViewController: UIViewController {
                 let decoder = JSONDecoder()
                 let jsonData = try decoder.decode([MedicinalPlantsModel].self, from: data)
                 self.listMedicinalPlants = jsonData
+                self.filterMedicinalPlants = jsonData
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                 }
@@ -44,21 +139,24 @@ class MedicinalPlantsViewController: UIViewController {
     
     private func setupUI() {
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-        let rightBarButtonItem = UIBarButtonItem(customView: searchView)
+        let rightBarButtonItem = UIBarButtonItem(customView: searchDocumentView)
         navigationItem.rightBarButtonItem = rightBarButtonItem
         showNavCustom()
+        
+        let leftBarButtonItem = UIBarButtonItem(customView: dropdownView)
+        navigationItem.leftBarButtonItem = leftBarButtonItem
     }
 }
 
 extension MedicinalPlantsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return listMedicinalPlants.count
+        return filterMedicinalPlants.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(cellType: MedicinalTableViewCell.self, forIndexPath: indexPath)
-        cell.fillData(medicinal: listMedicinalPlants[indexPath.row])
+        cell.fillData(medicinal: filterMedicinalPlants[indexPath.row])
         let selectedView = UIView()
         selectedView.backgroundColor = UIColor.white
         cell.selectedBackgroundView = selectedView
@@ -67,11 +165,17 @@ extension MedicinalPlantsViewController: UITableViewDelegate, UITableViewDataSou
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = storyboard?.instantiateViewController(withIdentifier: "DetailMedicinalViewController") as! DetailMedicinalViewController
-        vc.detailMedicinal = listMedicinalPlants[indexPath.row]
+        vc.detailMedicinal = filterMedicinalPlants[indexPath.row]
         navigationController?.pushViewController(vc, animated: true)
     }
     
     
+}
+
+extension MedicinalPlantsViewController: UIPopoverPresentationControllerDelegate {
+    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
+        return .none
+    }
 }
 
 extension FileManager {

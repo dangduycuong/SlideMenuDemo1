@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="JCl-gM-eQg">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="JCl-gM-eQg">
                                 <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
@@ -240,6 +240,50 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Fa-uS-Cru" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="757.60000000000002" y="1579.1604197901052"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="nEu-J0-tqV">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="Awi-80-CZC" customClass="ViewController" customModule="SlideMenuDemo1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PpI-bY-Vxt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="64N-jC-BQL">
+                                <rect key="frame" x="16" y="16" width="343" height="635"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eK2-TH-MoP">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="309.5"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Tìm theo tên"/>
+                                        <connections>
+                                            <action selector="sortByNameClicked:" destination="Awi-80-CZC" eventType="touchUpInside" id="Ghb-wV-QyS"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yCA-mF-h0x">
+                                        <rect key="frame" x="0.0" y="325.5" width="343" height="309.5"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Tìm theo công năng"/>
+                                        <connections>
+                                            <action selector="sortByFunctionClicked:" destination="Awi-80-CZC" eventType="touchUpInside" id="vIU-ZM-Ta6"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="OJu-0x-cm7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="OJu-0x-cm7" firstAttribute="trailing" secondItem="64N-jC-BQL" secondAttribute="trailing" constant="16" id="KzV-zd-7Wx"/>
+                            <constraint firstItem="64N-jC-BQL" firstAttribute="top" secondItem="OJu-0x-cm7" secondAttribute="top" constant="16" id="My5-e4-Vnk"/>
+                            <constraint firstItem="64N-jC-BQL" firstAttribute="leading" secondItem="OJu-0x-cm7" secondAttribute="leading" constant="16" id="Rgo-Ww-CSd"/>
+                            <constraint firstItem="OJu-0x-cm7" firstAttribute="bottom" secondItem="64N-jC-BQL" secondAttribute="bottom" constant="16" id="VIN-yx-dju"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ol1-P9-h1T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1697" y="1579"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ryO-jw-xmW">

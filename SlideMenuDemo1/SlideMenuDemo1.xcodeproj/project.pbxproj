@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -28,6 +28,11 @@
 		FAC200D928E53EE400C6EBF4 /* SearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAC200D828E53EE400C6EBF4 /* SearchView.xib */; };
 		FAC200DB28E541DF00C6EBF4 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC200DA28E541DF00C6EBF4 /* UIViewController+Extension.swift */; };
 		FAC200DF28E55FBA00C6EBF4 /* Thuoc.json in Resources */ = {isa = PBXBuildFile; fileRef = FAC200DE28E55FBA00C6EBF4 /* Thuoc.json */; };
+		FAC200E228E582C800C6EBF4 /* SearchDocumentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAC200E128E582C800C6EBF4 /* SearchDocumentView.xib */; };
+		FAC200E428E5830800C6EBF4 /* SearchDocumentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC200E328E5830800C6EBF4 /* SearchDocumentView.swift */; };
+		FAC200E728E5857600C6EBF4 /* DropDownSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC200E628E5857600C6EBF4 /* DropDownSelectView.swift */; };
+		FAC200E928E5858000C6EBF4 /* DropDownSelectView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAC200E828E5858000C6EBF4 /* DropDownSelectView.xib */; };
+		FAC200EB28E58E5700C6EBF4 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC200EA28E58E5600C6EBF4 /* String+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +75,11 @@
 		FAC200D828E53EE400C6EBF4 /* SearchView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchView.xib; sourceTree = "<group>"; };
 		FAC200DA28E541DF00C6EBF4 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		FAC200DE28E55FBA00C6EBF4 /* Thuoc.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Thuoc.json; sourceTree = "<group>"; };
+		FAC200E128E582C800C6EBF4 /* SearchDocumentView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchDocumentView.xib; sourceTree = "<group>"; };
+		FAC200E328E5830800C6EBF4 /* SearchDocumentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDocumentView.swift; sourceTree = "<group>"; };
+		FAC200E628E5857600C6EBF4 /* DropDownSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownSelectView.swift; sourceTree = "<group>"; };
+		FAC200E828E5858000C6EBF4 /* DropDownSelectView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DropDownSelectView.xib; sourceTree = "<group>"; };
+		FAC200EA28E58E5600C6EBF4 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +110,6 @@
 				D581C8881AAFADAE46150740 /* Pods-SlideMenuDemo1Tests.debug.xcconfig */,
 				4AF3B5B5D9DBE45E46C60616 /* Pods-SlideMenuDemo1Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -174,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				FAC200C328E4966900C6EBF4 /* Identifier.swift */,
+				FAC200EA28E58E5600C6EBF4 /* String+Extension.swift */,
 				FAC200C528E4967A00C6EBF4 /* UIView+Extension.swift */,
 				FAC200C728E4968C00C6EBF4 /* UITableView+Extension.swift */,
 				FAC200DA28E541DF00C6EBF4 /* UIViewController+Extension.swift */,
@@ -184,6 +194,8 @@
 		FAC200C928E496C500C6EBF4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FAC200E528E5855700C6EBF4 /* DropDownSelectView */,
+				FAC200E028E582B000C6EBF4 /* SearchDocumentView */,
 				FAC200D528E53EC100C6EBF4 /* SearchView */,
 				FAC200CA28E496CD00C6EBF4 /* MedicinalTableViewCell */,
 			);
@@ -214,6 +226,24 @@
 				FAC200D828E53EE400C6EBF4 /* SearchView.xib */,
 			);
 			path = SearchView;
+			sourceTree = "<group>";
+		};
+		FAC200E028E582B000C6EBF4 /* SearchDocumentView */ = {
+			isa = PBXGroup;
+			children = (
+				FAC200E128E582C800C6EBF4 /* SearchDocumentView.xib */,
+				FAC200E328E5830800C6EBF4 /* SearchDocumentView.swift */,
+			);
+			path = SearchDocumentView;
+			sourceTree = "<group>";
+		};
+		FAC200E528E5855700C6EBF4 /* DropDownSelectView */ = {
+			isa = PBXGroup;
+			children = (
+				FAC200E628E5857600C6EBF4 /* DropDownSelectView.swift */,
+				FAC200E828E5858000C6EBF4 /* DropDownSelectView.xib */,
+			);
+			path = DropDownSelectView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,6 +337,8 @@
 				CEFD2D6921F85CC900FE5A0A /* Assets.xcassets in Resources */,
 				FAC200CE28E496EA00C6EBF4 /* MedicinalTableViewCell.xib in Resources */,
 				CEFD2D6721F85CC800FE5A0A /* Main.storyboard in Resources */,
+				FAC200E928E5858000C6EBF4 /* DropDownSelectView.xib in Resources */,
+				FAC200E228E582C800C6EBF4 /* SearchDocumentView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,9 +423,12 @@
 				FAC200D728E53EDA00C6EBF4 /* SearchView.swift in Sources */,
 				FAC200DB28E541DF00C6EBF4 /* UIViewController+Extension.swift in Sources */,
 				FAC200CD28E496EA00C6EBF4 /* MedicinalTableViewCell.swift in Sources */,
+				FAC200E728E5857600C6EBF4 /* DropDownSelectView.swift in Sources */,
+				FAC200E428E5830800C6EBF4 /* SearchDocumentView.swift in Sources */,
 				FAC200D028E49E3800C6EBF4 /* DetailMedicinalViewController.swift in Sources */,
 				FAC200C628E4967A00C6EBF4 /* UIView+Extension.swift in Sources */,
 				FAC200BF28E4948B00C6EBF4 /* MedicinalPlantsViewController.swift in Sources */,
+				FAC200EB28E58E5700C6EBF4 /* String+Extension.swift in Sources */,
 				FAC200C828E4968C00C6EBF4 /* UITableView+Extension.swift in Sources */,
 				FAC200C428E4966900C6EBF4 /* Identifier.swift in Sources */,
 				CEFD2D6421F85CC800FE5A0A /* ViewController.swift in Sources */,

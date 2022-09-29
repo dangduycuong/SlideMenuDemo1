@@ -12,6 +12,8 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var leadingRed: NSLayoutConstraint!
     
+    var sortByName: (() -> Void)?
+    var sortByFunction: (() -> Void)?
     
     var isOn: Bool = false {
         didSet {
@@ -31,7 +33,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        isOn = true
+//        isOn = true
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -54,5 +56,15 @@ class ViewController: UIViewController {
         isOn = !isOn
     }
     
+    
+    @IBAction func sortByNameClicked(_ sender: UIButton) {
+        sortByName?()
+        dismiss(animated: true)
+    }
+    
+    @IBAction func sortByFunctionClicked(_ sender: UIButton) {
+        sortByFunction?()
+        dismiss(animated: true)
+    }
 }
 

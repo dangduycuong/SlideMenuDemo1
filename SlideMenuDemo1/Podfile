@@ -7,6 +7,8 @@ target 'SlideMenuDemo1' do
 
   # Pods for SlideMenuDemo1
 	pod 'Kingfisher', '~> 7.0'
+	pod 'IQKeyboardManagerSwift'
+	#pod 'DropDown', '2.3.2'
 
   target 'SlideMenuDemo1Tests' do
     inherit! :search_paths
