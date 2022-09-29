@@ -21,4 +21,5 @@ struct MedicinalPlantsModel: Codable {
     
     var imageName: String?
     var taboo: String?
+    var medicinalThumb: String?
 }

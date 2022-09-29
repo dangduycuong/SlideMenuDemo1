@@ -22,7 +22,7 @@ class MedicinalPlantsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        loadJson(filename: "medicinal_plants")
+        loadJson(filename: "Thuoc")
         tableView.registerCell(MedicinalTableViewCell.self)
     }
     
@@ -59,6 +59,9 @@ extension MedicinalPlantsViewController: UITableViewDelegate, UITableViewDataSou
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(cellType: MedicinalTableViewCell.self, forIndexPath: indexPath)
         cell.fillData(medicinal: listMedicinalPlants[indexPath.row])
+        let selectedView = UIView()
+        selectedView.backgroundColor = UIColor.white
+        cell.selectedBackgroundView = selectedView
         return cell
     }
     

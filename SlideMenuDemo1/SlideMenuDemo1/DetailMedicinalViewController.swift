@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import Kingfisher
+import WebKit
 
 class DetailMedicinalViewController: UIViewController {
     
-    @IBOutlet weak var medicinalPlantImageView: UIImageView!
+    @IBOutlet weak var webView: WKWebView!
     @IBOutlet weak var otherNameLabel: UILabel!
     @IBOutlet weak var scienceNameLabel: UILabel!
     @IBOutlet weak var surnameLabel: UILabel!
@@ -28,6 +30,7 @@ class DetailMedicinalViewController: UIViewController {
         super.viewDidLoad()
         
         fillData()
+        webView.navigationDelegate = self
     }
     
     
@@ -35,8 +38,29 @@ class DetailMedicinalViewController: UIViewController {
     func fillData() {
         if let detailMedicinal = detailMedicinal {
             title = detailMedicinal.name
-            if let imageName = detailMedicinal.imageName {
-                medicinalPlantImageView.image = UIImage(named: imageName)
+            if let medicinalThumb = detailMedicinal.medicinalThumb {
+                let array: [String] = medicinalThumb.components(separatedBy: "/")
+                var components = URLComponents()
+                var path: String = ""
+                for i in 0..<array.count {
+                    switch i {
+                    case 0:
+                        components.scheme = array[i].replacingOccurrences(of: ":", with: "", options: NSString.CompareOptions.literal, range: nil)
+                    case 2:
+                        components.host = array[i]
+                    default:
+                        break
+                    }
+                    if i > 2 {
+                        path += "/\(array[i])"
+                    }
+                }
+                components.path = path
+                
+                if let url = components.url {
+                    let request = URLRequest(url: url)
+                    webView.load(request)
+                }
             }
             
             otherNameLabel.text = detailMedicinal.otherName
@@ -56,7 +80,12 @@ class DetailMedicinalViewController: UIViewController {
             } else {
                 noteLabel.text = "\t"
             }
+            
         }
     }
 
+}
+
+extension DetailMedicinalViewController: WKNavigationDelegate {
+    
 }
