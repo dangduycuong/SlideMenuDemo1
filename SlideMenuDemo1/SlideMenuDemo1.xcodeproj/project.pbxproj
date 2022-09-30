@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,7 @@
 		CEFD2D6921F85CC900FE5A0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEFD2D6821F85CC900FE5A0A /* Assets.xcassets */; };
 		CEFD2D6C21F85CC900FE5A0A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEFD2D6A21F85CC900FE5A0A /* LaunchScreen.storyboard */; };
 		CEFD2D7721F85CC900FE5A0A /* SlideMenuDemo1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFD2D7621F85CC900FE5A0A /* SlideMenuDemo1Tests.swift */; };
+		FA97059E28E68EF500521567 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA97059D28E68EF500521567 /* R.generated.swift */; };
 		FAC200BD28E4941000C6EBF4 /* medicinal_plants.json in Resources */ = {isa = PBXBuildFile; fileRef = FAC200BC28E4941000C6EBF4 /* medicinal_plants.json */; };
 		FAC200BF28E4948B00C6EBF4 /* MedicinalPlantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC200BE28E4948B00C6EBF4 /* MedicinalPlantsViewController.swift */; };
 		FAC200C128E4953000C6EBF4 /* MedicinalPlantsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC200C028E4953000C6EBF4 /* MedicinalPlantsModel.swift */; };
@@ -62,6 +63,9 @@
 		CEFD2D7821F85CC900FE5A0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D581C8881AAFADAE46150740 /* Pods-SlideMenuDemo1Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlideMenuDemo1Tests.debug.xcconfig"; path = "Target Support Files/Pods-SlideMenuDemo1Tests/Pods-SlideMenuDemo1Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		F5A72BA17658A61CEC5F09A0 /* Pods_SlideMenuDemo1Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SlideMenuDemo1Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA97059628E68BC400521567 /* PlayfairDisplay-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlayfairDisplay-Bold.ttf"; sourceTree = "<group>"; };
+		FA97059728E68BD000521567 /* PlayfairDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlayfairDisplay-Regular.ttf"; sourceTree = "<group>"; };
+		FA97059D28E68EF500521567 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		FAC200BC28E4941000C6EBF4 /* medicinal_plants.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = medicinal_plants.json; sourceTree = "<group>"; };
 		FAC200BE28E4948B00C6EBF4 /* MedicinalPlantsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicinalPlantsViewController.swift; sourceTree = "<group>"; };
 		FAC200C028E4953000C6EBF4 /* MedicinalPlantsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicinalPlantsModel.swift; sourceTree = "<group>"; };
@@ -145,6 +149,8 @@
 		CEFD2D6021F85CC800FE5A0A /* SlideMenuDemo1 */ = {
 			isa = PBXGroup;
 			children = (
+				FA97059828E68BF000521567 /* Shared */,
+				FA97059428E68B8B00521567 /* Resource */,
 				FAC200C928E496C500C6EBF4 /* Views */,
 				FAC200C228E4965400C6EBF4 /* Extensions */,
 				FAC200BB28E493EF00C6EBF4 /* SupportFiles */,
@@ -166,6 +172,39 @@
 				CEFD2D7821F85CC900FE5A0A /* Info.plist */,
 			);
 			path = SlideMenuDemo1Tests;
+			sourceTree = "<group>";
+		};
+		FA97059428E68B8B00521567 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				FA97059D28E68EF500521567 /* R.generated.swift */,
+				FA97059528E68BAA00521567 /* Fonts */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		FA97059528E68BAA00521567 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				FA97059728E68BD000521567 /* PlayfairDisplay-Regular.ttf */,
+				FA97059628E68BC400521567 /* PlayfairDisplay-Bold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		FA97059828E68BF000521567 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				FA97059928E68BF600521567 /* Common */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		FA97059928E68BF600521567 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		FAC200BB28E493EF00C6EBF4 /* SupportFiles */ = {
@@ -262,6 +301,7 @@
 			buildConfigurationList = CEFD2D7B21F85CC900FE5A0A /* Build configuration list for PBXNativeTarget "SlideMenuDemo1" */;
 			buildPhases = (
 				1DA00BADCD4F928257ED5E72 /* [CP] Check Pods Manifest.lock */,
+				FA97059C28E68DBD00521567 /* RSwift */,
 				CEFD2D5A21F85CC800FE5A0A /* Sources */,
 				CEFD2D5B21F85CC800FE5A0A /* Frameworks */,
 				CEFD2D5C21F85CC800FE5A0A /* Resources */,
@@ -421,6 +461,26 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SlideMenuDemo1/Pods-SlideMenuDemo1-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		FA97059C28E68DBD00521567 /* RSwift */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = RSwift;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -430,6 +490,7 @@
 			files = (
 				FAC200D728E53EDA00C6EBF4 /* SearchView.swift in Sources */,
 				FAC200DB28E541DF00C6EBF4 /* UIViewController+Extension.swift in Sources */,
+				FA97059E28E68EF500521567 /* R.generated.swift in Sources */,
 				FAC200CD28E496EA00C6EBF4 /* MedicinalTableViewCell.swift in Sources */,
 				FAC200E728E5857600C6EBF4 /* DropDownSelectView.swift in Sources */,
 				FAC200E428E5830800C6EBF4 /* SearchDocumentView.swift in Sources */,
