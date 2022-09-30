@@ -15,7 +15,9 @@
 		CEFD2D6921F85CC900FE5A0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEFD2D6821F85CC900FE5A0A /* Assets.xcassets */; };
 		CEFD2D6C21F85CC900FE5A0A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEFD2D6A21F85CC900FE5A0A /* LaunchScreen.storyboard */; };
 		CEFD2D7721F85CC900FE5A0A /* SlideMenuDemo1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFD2D7621F85CC900FE5A0A /* SlideMenuDemo1Tests.swift */; };
-		FA97059E28E68EF500521567 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA97059D28E68EF500521567 /* R.generated.swift */; };
+		FA9705A028E6916000521567 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA97059F28E6916000521567 /* R.generated.swift */; };
+		FA9705A228E6925D00521567 /* PlayfairDisplay-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA9705A128E6925D00521567 /* PlayfairDisplay-Bold.ttf */; };
+		FA9705A428E6926B00521567 /* PlayfairDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA9705A328E6926B00521567 /* PlayfairDisplay-Regular.ttf */; };
 		FAC200BD28E4941000C6EBF4 /* medicinal_plants.json in Resources */ = {isa = PBXBuildFile; fileRef = FAC200BC28E4941000C6EBF4 /* medicinal_plants.json */; };
 		FAC200BF28E4948B00C6EBF4 /* MedicinalPlantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC200BE28E4948B00C6EBF4 /* MedicinalPlantsViewController.swift */; };
 		FAC200C128E4953000C6EBF4 /* MedicinalPlantsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC200C028E4953000C6EBF4 /* MedicinalPlantsModel.swift */; };
@@ -63,9 +65,9 @@
 		CEFD2D7821F85CC900FE5A0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D581C8881AAFADAE46150740 /* Pods-SlideMenuDemo1Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlideMenuDemo1Tests.debug.xcconfig"; path = "Target Support Files/Pods-SlideMenuDemo1Tests/Pods-SlideMenuDemo1Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		F5A72BA17658A61CEC5F09A0 /* Pods_SlideMenuDemo1Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SlideMenuDemo1Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FA97059628E68BC400521567 /* PlayfairDisplay-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlayfairDisplay-Bold.ttf"; sourceTree = "<group>"; };
-		FA97059728E68BD000521567 /* PlayfairDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlayfairDisplay-Regular.ttf"; sourceTree = "<group>"; };
-		FA97059D28E68EF500521567 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		FA97059F28E6916000521567 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		FA9705A128E6925D00521567 /* PlayfairDisplay-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlayfairDisplay-Bold.ttf"; sourceTree = "<group>"; };
+		FA9705A328E6926B00521567 /* PlayfairDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlayfairDisplay-Regular.ttf"; sourceTree = "<group>"; };
 		FAC200BC28E4941000C6EBF4 /* medicinal_plants.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = medicinal_plants.json; sourceTree = "<group>"; };
 		FAC200BE28E4948B00C6EBF4 /* MedicinalPlantsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicinalPlantsViewController.swift; sourceTree = "<group>"; };
 		FAC200C028E4953000C6EBF4 /* MedicinalPlantsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicinalPlantsModel.swift; sourceTree = "<group>"; };
@@ -177,7 +179,7 @@
 		FA97059428E68B8B00521567 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				FA97059D28E68EF500521567 /* R.generated.swift */,
+				FA97059F28E6916000521567 /* R.generated.swift */,
 				FA97059528E68BAA00521567 /* Fonts */,
 			);
 			path = Resource;
@@ -186,8 +188,8 @@
 		FA97059528E68BAA00521567 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				FA97059728E68BD000521567 /* PlayfairDisplay-Regular.ttf */,
-				FA97059628E68BC400521567 /* PlayfairDisplay-Bold.ttf */,
+				FA9705A328E6926B00521567 /* PlayfairDisplay-Regular.ttf */,
+				FA9705A128E6925D00521567 /* PlayfairDisplay-Bold.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -385,7 +387,9 @@
 				CEFD2D6921F85CC900FE5A0A /* Assets.xcassets in Resources */,
 				FAC200CE28E496EA00C6EBF4 /* MedicinalTableViewCell.xib in Resources */,
 				CEFD2D6721F85CC800FE5A0A /* Main.storyboard in Resources */,
+				FA9705A428E6926B00521567 /* PlayfairDisplay-Regular.ttf in Resources */,
 				FAC200E928E5858000C6EBF4 /* DropDownSelectView.xib in Resources */,
+				FA9705A228E6925D00521567 /* PlayfairDisplay-Bold.ttf in Resources */,
 				FAC200E228E582C800C6EBF4 /* SearchDocumentView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -490,7 +494,7 @@
 			files = (
 				FAC200D728E53EDA00C6EBF4 /* SearchView.swift in Sources */,
 				FAC200DB28E541DF00C6EBF4 /* UIViewController+Extension.swift in Sources */,
-				FA97059E28E68EF500521567 /* R.generated.swift in Sources */,
+				FA9705A028E6916000521567 /* R.generated.swift in Sources */,
 				FAC200CD28E496EA00C6EBF4 /* MedicinalTableViewCell.swift in Sources */,
 				FAC200E728E5857600C6EBF4 /* DropDownSelectView.swift in Sources */,
 				FAC200E428E5830800C6EBF4 /* SearchDocumentView.swift in Sources */,

@@ -74,8 +74,8 @@ class MedicinalPlantsViewController: UIViewController {
                 switch self.sortType {
                 case .name:
                     self.filterMedicinalPlants = self.listMedicinalPlants.filter { (medicinal: MedicinalPlantsModel) in
-                        if let name = medicinal.name?.lowercased().unaccent() {
-                            if name.range(of: text.lowercased().unaccent()) != nil {
+                        if let name = medicinal.name?.lowercased().unaccent(), let otherName = medicinal.otherName?.lowercased().unaccent() {
+                            if name.range(of: text.lowercased().unaccent()) != nil || otherName.range(of: text.lowercased().unaccent()) != nil {
                                 return true
                             }
                         }

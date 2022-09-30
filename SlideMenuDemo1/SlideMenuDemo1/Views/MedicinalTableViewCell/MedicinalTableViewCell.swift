@@ -13,6 +13,7 @@ class MedicinalTableViewCell: UITableViewCell {
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var medicinalPlantsImageView: UIImageView!
+    @IBOutlet weak var otherNameLabel: UILabel!
     @IBOutlet weak var functionLabel: UILabel!
     
     override func awakeFromNib() {
@@ -79,6 +80,7 @@ class MedicinalTableViewCell: UITableViewCell {
                     }
                 }
             }
+            otherNameLabel.text = medicinal.otherName
             functionLabel.text = medicinal.function
         }
     }

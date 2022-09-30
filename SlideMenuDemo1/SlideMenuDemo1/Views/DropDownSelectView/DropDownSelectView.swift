@@ -10,12 +10,14 @@ import UIKit
 
 class DropDownSelectView: UIView {
     @IBOutlet weak var dropdownButton: UIButton!
+    @IBOutlet weak var dropdownIcon: UIImageView!
     
     var showPopup: (() -> Void)?
     
     override func awakeFromNib() {
         super.awakeFromNib()
         dropdownButton.setTitle("", for: .normal)
+        dropdownIcon.image = R.image.icons8Sort_down()?.withTintColor(.white, renderingMode: .alwaysTemplate)
     }
     
     @IBAction func showDropdownClicked(_ sender: UIButton) {
