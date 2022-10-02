@@ -14,7 +14,10 @@ class SearchDocumentView: UIView {
     @IBOutlet weak var clearImageView: UIImageView!
     @IBOutlet weak var clearTextButton: UIButton!
     @IBOutlet weak var widthSearchView: NSLayoutConstraint!
+    @IBOutlet weak var dropdownButton: UIButton!
+    @IBOutlet weak var dropdownIcon: UIImageView!
     
+    var showPopup: ((_ button: UIButton) -> Void)?
     var textChange: ((_ text: String) -> Void)?
     var clearAllSearchText: (() -> Void)?
     
@@ -26,11 +29,11 @@ class SearchDocumentView: UIView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        widthSearchView.constant = UIScreen.main.bounds.width - 44 - 16*2
+        widthSearchView.constant = UIScreen.main.bounds.width - 16*2
     }
     
     private func setupUI() {
-        widthSearchView.constant = UIScreen.main.bounds.width - 44 - 16*2
+        widthSearchView.constant = UIScreen.main.bounds.width - 16*2
         searchTextField.textColor = UIColor.white
 //        searchTextField.font = LatoFont.regular(with: 16)
         let paragraphStyle = NSMutableParagraphStyle()
@@ -47,10 +50,12 @@ class SearchDocumentView: UIView {
         clearImageView.tintColor = .white
         clearImageView.isHidden = true
 //        searchView.backgroundColor = AppColor.Background.lightestGray
+        dropdownButton.setTitle("", for: .normal)
+        dropdownIcon.image = R.image.icons8Sort_down()?.withTintColor(.white, renderingMode: .alwaysTemplate)
     }
     
     func refreshUI() {
-        widthSearchView.constant = UIScreen.main.bounds.width - 44 - 16*2
+        widthSearchView.constant = UIScreen.main.bounds.width - 16*2
     }
     
     @IBAction func tapClearTextButton(_ sender: UIButton) {
@@ -58,6 +63,11 @@ class SearchDocumentView: UIView {
         clearImageView.isHidden = true
         clearAllSearchText?()
     }
+    
+    @IBAction func selectFilterOption(_ sender: UIButton) {
+        showPopup?(sender)
+    }
+    
 }
 
 extension SearchDocumentView: UITextFieldDelegate {

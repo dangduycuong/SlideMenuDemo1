@@ -29,7 +29,7 @@
                             </constraints>
                         </imageView>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T0C-rO-fxY">
-                            <rect key="frame" x="16" y="0.0" width="358" height="40"/>
+                            <rect key="frame" x="40" y="0.0" width="334" height="40"/>
                             <fontDescription key="fontDescription" name="PlayfairDisplay-Regular" family="Playfair Display" pointSize="17"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
@@ -42,19 +42,42 @@
                                 <action selector="tapClearTextButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="WYU-qd-Mhi"/>
                             </connections>
                         </button>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7MZ-w8-UQr">
+                            <rect key="frame" x="8" y="12" width="16" height="16"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="16" id="Ucj-3D-JKp"/>
+                                <constraint firstAttribute="width" constant="16" id="qA9-jR-yah"/>
+                            </constraints>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pPT-qG-KEx">
+                            <rect key="frame" x="0.0" y="0.0" width="32" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="32" id="IrU-lJ-zdA"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain"/>
+                            <connections>
+                                <action selector="selectFilterOption:" destination="iN0-l3-epB" eventType="touchUpInside" id="fo7-8a-4XR"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" red="0.8901960784313725" green="0.90588235294117647" blue="0.92941176470588238" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
+                        <constraint firstItem="7MZ-w8-UQr" firstAttribute="centerY" secondItem="FCp-gm-dWa" secondAttribute="centerY" id="2xq-H5-KU9"/>
+                        <constraint firstItem="pPT-qG-KEx" firstAttribute="leading" secondItem="FCp-gm-dWa" secondAttribute="leading" id="51J-TR-HcA"/>
                         <constraint firstItem="189-nJ-Nni" firstAttribute="centerY" secondItem="FCp-gm-dWa" secondAttribute="centerY" id="C8S-JJ-3Se"/>
+                        <constraint firstItem="T0C-rO-fxY" firstAttribute="leading" secondItem="pPT-qG-KEx" secondAttribute="trailing" constant="8" id="GRR-KK-S81"/>
                         <constraint firstItem="YNO-0v-fmM" firstAttribute="top" secondItem="FCp-gm-dWa" secondAttribute="top" id="Ir5-yf-23L"/>
                         <constraint firstAttribute="width" constant="414" id="RaO-b0-SSs"/>
                         <constraint firstAttribute="height" constant="40" id="TkE-Ih-DHp"/>
+                        <constraint firstItem="7MZ-w8-UQr" firstAttribute="leading" secondItem="FCp-gm-dWa" secondAttribute="leading" constant="8" id="WtN-fP-KYC"/>
                         <constraint firstItem="189-nJ-Nni" firstAttribute="leading" secondItem="YNO-0v-fmM" secondAttribute="leading" id="iqj-JQ-yEm"/>
                         <constraint firstAttribute="bottom" secondItem="YNO-0v-fmM" secondAttribute="bottom" id="j4I-Lm-M6l"/>
+                        <constraint firstAttribute="bottom" secondItem="pPT-qG-KEx" secondAttribute="bottom" id="jAR-aM-Ry1"/>
+                        <constraint firstItem="pPT-qG-KEx" firstAttribute="top" secondItem="FCp-gm-dWa" secondAttribute="top" id="lgV-K0-2Io"/>
                         <constraint firstAttribute="trailing" secondItem="YNO-0v-fmM" secondAttribute="trailing" id="pGw-x1-fX0"/>
                         <constraint firstItem="189-nJ-Nni" firstAttribute="leading" secondItem="T0C-rO-fxY" secondAttribute="trailing" id="tsw-OH-JtP"/>
                         <constraint firstItem="T0C-rO-fxY" firstAttribute="top" secondItem="FCp-gm-dWa" secondAttribute="top" id="vC1-Ph-4cU"/>
-                        <constraint firstItem="T0C-rO-fxY" firstAttribute="leading" secondItem="FCp-gm-dWa" secondAttribute="leading" constant="16" id="w6a-I4-5yD"/>
                         <constraint firstAttribute="bottom" secondItem="T0C-rO-fxY" secondAttribute="bottom" id="yQ4-De-Ij9"/>
                     </constraints>
                 </view>
@@ -71,6 +94,8 @@
             <connections>
                 <outlet property="clearImageView" destination="189-nJ-Nni" id="8UY-nN-DuP"/>
                 <outlet property="clearTextButton" destination="YNO-0v-fmM" id="gfa-IP-KTC"/>
+                <outlet property="dropdownButton" destination="pPT-qG-KEx" id="qNd-Sm-mWg"/>
+                <outlet property="dropdownIcon" destination="7MZ-w8-UQr" id="sOK-Te-c8M"/>
                 <outlet property="searchTextField" destination="T0C-rO-fxY" id="1Nt-NH-Lmc"/>
                 <outlet property="searchView" destination="FCp-gm-dWa" id="4c0-OI-ycb"/>
                 <outlet property="widthSearchView" destination="RaO-b0-SSs" id="k3J-hm-7Sg"/>

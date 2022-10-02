@@ -37,11 +37,6 @@ class MedicinalPlantsViewController: UIViewController {
         return view
     }()
     
-    lazy private var dropdownView: UIView = {
-        let view: DropDownSelectView = DropDownSelectView.loadFromNibView()
-        return view
-    }()
-    
     lazy private var searchDocumentView: UIView = {
         let view: SearchDocumentView = SearchDocumentView.loadFromNibView()
         return view
@@ -62,35 +57,37 @@ class MedicinalPlantsViewController: UIViewController {
     }
     
     private func abob() {
-        if let dropdownView = dropdownView as? DropDownSelectView {
-            dropdownView.showPopup = {
-                self.flowerButtonlicked()
-            }
-        }
-        
         if let searchDocumentView = searchDocumentView as? SearchDocumentView {
             delegate.self = searchDocumentView
+            searchDocumentView.showPopup = { [weak self] button in
+                self?.flowerButtonlicked(button: button)
+            }
             searchDocumentView.textChange = { text in
-                switch self.sortType {
-                case .name:
-                    self.filterMedicinalPlants = self.listMedicinalPlants.filter { (medicinal: MedicinalPlantsModel) in
-                        if let name = medicinal.name?.lowercased().unaccent(), let otherName = medicinal.otherName?.lowercased().unaccent() {
-                            if name.range(of: text.lowercased().unaccent()) != nil || otherName.range(of: text.lowercased().unaccent()) != nil {
-                                return true
+                if text == "" {
+                    self.filterMedicinalPlants = self.listMedicinalPlants
+                } else {
+                    switch self.sortType {
+                    case .name:
+                        self.filterMedicinalPlants = self.listMedicinalPlants.filter { (medicinal: MedicinalPlantsModel) in
+                            if let name = medicinal.name?.lowercased().unaccent(), let otherName = medicinal.otherName?.lowercased().unaccent() {
+                                if name.range(of: text.lowercased().unaccent()) != nil || otherName.range(of: text.lowercased().unaccent()) != nil {
+                                    return true
+                                }
                             }
+                            return false
                         }
-                        return false
-                    }
-                case .function:
-                    self.filterMedicinalPlants = self.listMedicinalPlants.filter { (medicinal: MedicinalPlantsModel) in
-                        if let function = medicinal.function?.lowercased().unaccent() {
-                            if function.range(of: text.lowercased().unaccent()) != nil {
-                                return true
+                    case .function:
+                        self.filterMedicinalPlants = self.listMedicinalPlants.filter { (medicinal: MedicinalPlantsModel) in
+                            if let function = medicinal.function?.lowercased().unaccent() {
+                                if function.range(of: text.lowercased().unaccent()) != nil {
+                                    return true
+                                }
                             }
+                            return false
                         }
-                        return false
                     }
                 }
+                
                 self.tableView.reloadData()
             }
             
@@ -101,12 +98,13 @@ class MedicinalPlantsViewController: UIViewController {
         }
     }
     
-    func flowerButtonlicked() {
+    func flowerButtonlicked(button: UIButton) {
         let vc = storyboard?.instantiateViewController(withIdentifier: "ViewController") as! ViewController
         vc.modalPresentationStyle = .popover
         let popover: UIPopoverPresentationController = vc.popoverPresentationController!
-        popover.barButtonItem = navigationItem.leftBarButtonItem
-        popover.sourceRect = CGRect(origin: self.view.center, size: CGSize.zero)
+//        popover.barButtonItem = navigationItem.leftBarButtonItem
+        popover.sourceView = searchDocumentView
+//        popover.sourceRect = CGRect(origin: self.view.center, size: CGSize.zero)
         popover.delegate = self
         vc.sortByName = {
             self.sortType = .name
@@ -142,9 +140,6 @@ class MedicinalPlantsViewController: UIViewController {
         let rightBarButtonItem = UIBarButtonItem(customView: searchDocumentView)
         navigationItem.rightBarButtonItem = rightBarButtonItem
         showNavCustom()
-        
-        let leftBarButtonItem = UIBarButtonItem(customView: dropdownView)
-        navigationItem.leftBarButtonItem = leftBarButtonItem
     }
 }
 

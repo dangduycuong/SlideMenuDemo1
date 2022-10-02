@@ -63,29 +63,24 @@ class DetailMedicinalViewController: UIViewController {
                 }
             }
             
-            otherNameLabel.text = detailMedicinal.otherName
-            scienceNameLabel.text = detailMedicinal.scienceName
-            surnameLabel.text = detailMedicinal.surname
-            partsUsedLabel.text = detailMedicinal.partsUsed
+            otherNameLabel.text = detailMedicinal.otherName ?? "\t"
+            scienceNameLabel.text = detailMedicinal.scienceName ?? "\t"
+            surnameLabel.text = detailMedicinal.surname ?? "\t"
+            partsUsedLabel.text = detailMedicinal.partsUsed ?? "\t"
             
-            functionLabel.text = detailMedicinal.function
-            dosageAndUsageLabel.text = detailMedicinal.dosageAndUsage
-            if let taboo = detailMedicinal.taboo {
-                tabooLabel.text = taboo
-            } else {
-                tabooLabel.text = "\t"
-            }
-            if let note = detailMedicinal.note {
-                noteLabel.text = note
-            } else {
-                noteLabel.text = "\t"
-            }
-            
+            functionLabel.text = detailMedicinal.function ?? "\t"
+            dosageAndUsageLabel.text = detailMedicinal.dosageAndUsage ?? "\t"
+            tabooLabel.text = detailMedicinal.taboo ?? "\t"
+            noteLabel.text = detailMedicinal.note ?? "\t"
+            webView.scrollView.showsVerticalScrollIndicator = false
+            webView.scrollView.showsHorizontalScrollIndicator = false
         }
     }
 
 }
 
 extension DetailMedicinalViewController: WKNavigationDelegate {
-    
+    func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
+        
+    }
 }

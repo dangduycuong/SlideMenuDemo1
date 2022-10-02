@@ -15,6 +15,7 @@
 		CEFD2D6921F85CC900FE5A0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEFD2D6821F85CC900FE5A0A /* Assets.xcassets */; };
 		CEFD2D6C21F85CC900FE5A0A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEFD2D6A21F85CC900FE5A0A /* LaunchScreen.storyboard */; };
 		CEFD2D7721F85CC900FE5A0A /* SlideMenuDemo1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFD2D7621F85CC900FE5A0A /* SlideMenuDemo1Tests.swift */; };
+		FA57C02C28E9649D00596AB8 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA57C02B28E9649D00596AB8 /* UIColor+Extension.swift */; };
 		FA9705A028E6916000521567 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA97059F28E6916000521567 /* R.generated.swift */; };
 		FA9705A228E6925D00521567 /* PlayfairDisplay-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA9705A128E6925D00521567 /* PlayfairDisplay-Bold.ttf */; };
 		FA9705A428E6926B00521567 /* PlayfairDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA9705A328E6926B00521567 /* PlayfairDisplay-Regular.ttf */; };
@@ -65,6 +66,7 @@
 		CEFD2D7821F85CC900FE5A0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D581C8881AAFADAE46150740 /* Pods-SlideMenuDemo1Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlideMenuDemo1Tests.debug.xcconfig"; path = "Target Support Files/Pods-SlideMenuDemo1Tests/Pods-SlideMenuDemo1Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		F5A72BA17658A61CEC5F09A0 /* Pods_SlideMenuDemo1Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SlideMenuDemo1Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA57C02B28E9649D00596AB8 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		FA97059F28E6916000521567 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		FA9705A128E6925D00521567 /* PlayfairDisplay-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlayfairDisplay-Bold.ttf"; sourceTree = "<group>"; };
 		FA9705A328E6926B00521567 /* PlayfairDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlayfairDisplay-Regular.ttf"; sourceTree = "<group>"; };
@@ -222,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				FAC200C328E4966900C6EBF4 /* Identifier.swift */,
+				FA57C02B28E9649D00596AB8 /* UIColor+Extension.swift */,
 				FAC200EA28E58E5600C6EBF4 /* String+Extension.swift */,
 				FAC200C528E4967A00C6EBF4 /* UIView+Extension.swift */,
 				FAC200C728E4968C00C6EBF4 /* UITableView+Extension.swift */,
@@ -499,6 +502,7 @@
 				FAC200E728E5857600C6EBF4 /* DropDownSelectView.swift in Sources */,
 				FAC200E428E5830800C6EBF4 /* SearchDocumentView.swift in Sources */,
 				FAC200D028E49E3800C6EBF4 /* DetailMedicinalViewController.swift in Sources */,
+				FA57C02C28E9649D00596AB8 /* UIColor+Extension.swift in Sources */,
 				FAC200C628E4967A00C6EBF4 /* UIView+Extension.swift in Sources */,
 				FAC200BF28E4948B00C6EBF4 /* MedicinalPlantsViewController.swift in Sources */,
 				FAC200EB28E58E5700C6EBF4 /* String+Extension.swift in Sources */,

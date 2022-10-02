@@ -110,7 +110,7 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S7g-UE-3Oc">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S7g-UE-3Oc">
                                                         <rect key="frame" x="0.0" y="273" width="206" height="23"/>
                                                         <fontDescription key="fontDescription" name="PlayfairDisplay-Regular" family="Playfair Display" pointSize="17"/>
                                                         <nil key="textColor"/>
@@ -286,7 +286,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="OJu-0x-cm7"/>
-                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                        <color key="backgroundColor" red="0.20000000000000001" green="0.74509803921568629" blue="0.67843137254901964" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="OJu-0x-cm7" firstAttribute="trailing" secondItem="64N-jC-BQL" secondAttribute="trailing" constant="16" id="KzV-zd-7Wx"/>
                             <constraint firstItem="64N-jC-BQL" firstAttribute="top" secondItem="OJu-0x-cm7" secondAttribute="top" constant="16" id="My5-e4-Vnk"/>
@@ -320,9 +320,6 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemPinkColor">
-            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
