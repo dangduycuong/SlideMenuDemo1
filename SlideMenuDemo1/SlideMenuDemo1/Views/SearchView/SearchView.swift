@@ -19,6 +19,7 @@ class SearchView: UIView {
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineHeightMultiple = 1.0
         let attributes: [NSAttributedString.Key: Any] = [
+            .font: R.font.playfairDisplayRegular(size: 17) as Any,
             .paragraphStyle: paragraphStyle,
             .foregroundColor: UIColor.white,
         ]

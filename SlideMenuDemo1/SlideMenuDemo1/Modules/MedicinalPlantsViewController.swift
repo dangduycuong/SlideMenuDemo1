@@ -53,10 +53,10 @@ class MedicinalPlantsViewController: UIViewController {
         setupUI()
         loadJson(filename: "Thuoc")
         tableView.registerCell(MedicinalTableViewCell.self)
-        abob()
+        addObserver()
     }
     
-    private func abob() {
+    private func addObserver() {
         if let searchDocumentView = searchDocumentView as? SearchDocumentView {
             delegate.self = searchDocumentView
             searchDocumentView.showPopup = { [weak self] button in
@@ -137,8 +137,9 @@ class MedicinalPlantsViewController: UIViewController {
     
     private func setupUI() {
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-        let rightBarButtonItem = UIBarButtonItem(customView: searchDocumentView)
-        navigationItem.rightBarButtonItem = rightBarButtonItem
+        navigationItem.titleView = searchDocumentView
+//        let rightBarButtonItem = UIBarButtonItem(customView: searchDocumentView)
+//        navigationItem.rightBarButtonItem = rightBarButtonItem
         showNavCustom()
     }
 }

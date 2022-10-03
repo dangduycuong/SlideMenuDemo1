@@ -27,11 +27,6 @@ class SearchDocumentView: UIView {
         setupUI()
     }
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        widthSearchView.constant = UIScreen.main.bounds.width - 16*2
-    }
-    
     private func setupUI() {
         widthSearchView.constant = UIScreen.main.bounds.width - 16*2
         searchTextField.textColor = UIColor.white
@@ -52,6 +47,7 @@ class SearchDocumentView: UIView {
 //        searchView.backgroundColor = AppColor.Background.lightestGray
         dropdownButton.setTitle("", for: .normal)
         dropdownIcon.image = R.image.icons8Sort_down()?.withTintColor(.white, renderingMode: .alwaysTemplate)
+        searchView.layoutIfNeeded()
     }
     
     func refreshUI() {

@@ -85,7 +85,7 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="FCp-gm-dWa" secondAttribute="bottom" constant="6" id="5pl-F2-waT"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="FCp-gm-dWa" secondAttribute="bottom" constant="6" id="5pl-F2-waT"/>
                 <constraint firstItem="FCp-gm-dWa" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="QCM-zd-hlP"/>
                 <constraint firstItem="FCp-gm-dWa" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="xyO-PO-o3J"/>
                 <constraint firstAttribute="trailing" secondItem="FCp-gm-dWa" secondAttribute="trailing" id="zNh-2V-Jcz"/>
